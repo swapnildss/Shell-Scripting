@@ -3,3 +3,6 @@ frontend:
 
 mongod:
 	bash Components/mongodb.sh
+
+cat:
+	bash Components/cat.sh
