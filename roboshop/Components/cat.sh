@@ -42,15 +42,16 @@ cd /home/$UN/catalogue
 npm install &>> $logfile
 Update $?
 
+echo -n "Update the Mongodb IP"
+sed -i -e 's/MONGO_DNSNAME/172.31.95.58/' /home/roboshop/catalogue/systemd.service
+Update $?
 
 
-# vim systemd.servce
+echo -n "Start Catalogue"
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+systemctl daemon-reload
+systemctl start catalogue
+systemctl enable catalogue
+systemctl status catalogue -l
 
-
-
-# mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
-# systemctl daemon-reload
-# systemctl start catalogue
-# systemctl enable catalogue
-# systemctl status catalogue -l
-
+echo -e "\e[33m Process completed \e[0m"
