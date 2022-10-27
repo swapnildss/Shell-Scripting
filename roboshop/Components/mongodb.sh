@@ -39,10 +39,11 @@ Update $?
 
 echo -n "Inject the schema."
 cd /tmp
-unzip mongodb.zip
+rm -rf mongodb-main
+unzip mongodb.zip &>> $logfile
 cd mongodb-main
-mongo < catalogue.js
-mongo < users.js
+mongo < catalogue.js &>> $logfile
+mongo < users.js &>> $logfile
 Update $?
 
-echo - e "\e[32m Installation done succesfully \e[0m"
+echo -e "\e[32m Installation done succesfully \e[0m"
