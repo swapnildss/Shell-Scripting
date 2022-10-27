@@ -4,6 +4,7 @@ set -e
 
 Component=catalogue
 logfile=/tmp/$Component.log
+UN=roboshop
 Update () {
     if [ $1 -eq 0 ]; then
         echo -e "\e[32m Success \e[0m"
@@ -34,10 +35,10 @@ Update $?
 
 echo -n "Unzip the code"
 
-cd /home/roboshop
+cd /home/$UN
 unzip /tmp/catalogue.zip &>> $logfile
-mv catalogue-main catalogue
-cd /home/roboshop/catalogue
+mv catalogue-main/ catalogue
+cd /home/$UN/catalogue
 npm install &>> $logfile
 Update $?
 
