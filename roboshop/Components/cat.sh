@@ -30,6 +30,10 @@ Update $?
 
 echo -n "Install the code"
 curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip" &>> $logfile
+Update $?
+
+echo -n "Unzip the code"
+
 cd /home/roboshop
 unzip /tmp/catalogue.zip &>> $logfile
 mv catalogue-main catalogue
