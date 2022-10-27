@@ -3,7 +3,7 @@ set -e
 
 
 Component=nginx
-logfile= /tmp/$Component.log
+logfile=/tmp/$Component.log
 Update() {
     if [ $1 -eq 0 ]; then 
         echo -e "\e[32m Success \e[0m"
