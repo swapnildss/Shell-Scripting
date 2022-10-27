@@ -39,7 +39,7 @@ Update $?
 
 echo -n "Inject the schema."
 cd /tmp
-rm -rf mongodb-main
+rm -rf mongodb-main/*
 unzip mongodb.zip &>> $logfile
 cd mongodb-main
 mongo < catalogue.js &>> $logfile
