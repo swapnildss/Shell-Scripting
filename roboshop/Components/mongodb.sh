@@ -24,7 +24,7 @@ systemctl enable $Component
 Update $?
 
 echo -n "Update the IP from conf file"
-sed -i -e 's/127.0.0.1/0.0.0.0' /etc/$Component.conf
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/$Component.conf
 Update $?
 
 echo -n "Start MongoD"
