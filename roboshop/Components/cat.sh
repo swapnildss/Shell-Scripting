@@ -24,17 +24,17 @@ echo -n "Install NodeJS"
 yum install nodejs -y &>> $logfile
 Update $?
 
-echo -n "User Creation"
-useradd roboshop
-Update $?
+# echo -n "User Creation"
+# useradd roboshop
+# Update $?
 
 echo -n "Install the code"
-curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip" &>> %logfile
+curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip" &>> $logfile
 cd /home/roboshop
 unzip /tmp/catalogue.zip &>> $logfile
 mv catalogue-main catalogue
 cd /home/roboshop/catalogue
-npm install
+npm install &>> $logfile
 Update $?
 
 
