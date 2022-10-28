@@ -27,7 +27,7 @@ Update $?
 
 echo -n "Get the Passowrd"
 DB_PD=$(grep 'A temporary password' /var/log/mysqld.log | awk -F ' ' '{print $NF}')
-echo "$DB_PD"
+echo "Password:"$DB_PD
 Update $?
 
 echo -n "MYSQL Setup"
