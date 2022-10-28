@@ -5,4 +5,7 @@ mongod:
 	bash Components/mongodb.sh
 
 cat:
-	bash Components/cat.sh
+	bash Components/cat.
+	
+redis:
+	bash Components/redis.sh
