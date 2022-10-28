@@ -9,3 +9,6 @@ cat:
 	
 redis:
 	bash Components/redis.sh
+
+user:
+	bash Components/user.sh
