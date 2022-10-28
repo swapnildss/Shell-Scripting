@@ -32,7 +32,7 @@ npm install
 Update $?
 
 echo -n "update the IP"
-sed -i -e 's/REDIS_ENDPOINT/172.31.31.69/' -e 's/MONGO_ENDPOINT/172.31.95.58/'/home/roboshop/user/systemd.service
+sed -i -e 's/REDIS_ENDPOINT/172.31.31.69/' -e 's/MONGO_ENDPOINT/172.31.95.58/' /home/roboshop/user/systemd.service
 # $ vim /home/roboshop/user/systemd.service
 # Update `REDIS_ENDPOINT` with Redis Server IP
 # Update `MONGO_ENDPOINT` with MongoDB Server IP
