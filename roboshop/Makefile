@@ -4,11 +4,14 @@ frontend:
 mongod:
 	bash Components/mongodb.sh
 
-cat:
-	bash Components/cat.
+catalogue:
+	bash Components/catalogue.sh
 	
 redis:
 	bash Components/redis.sh
 
 user:
 	bash Components/user.sh
+
+cart:
+	bash Components/cart.sh
